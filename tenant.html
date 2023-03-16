@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tenant Dashboard</title>
+</head>
+<body>
+	<h1>Tenant Dashboard</h1>
+	
+	<h2>Make Payment</h2>
+	<p>Click the button below to view bank details and make a payment:</p>
+	<button onclick="showBankDetails()">Make Payment</button>
+	<div id="bankDetails" style="display:none">
+		<p>Bank Name: Example Bank</p>
+		<p>Account Number: 1234567890</p>
+		<p>Routing Number: 0987654321</p>
+	</div>
+	
+	<h2>Submit Receipt</h2>
+	<p>Upload an image or PDF of your receipt after making payment:</p>
+	<form>
+		<label for="receiptFile">Select file:</label>
+		<input type="file" id="receiptFile" name="receiptFile"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+	
+	<h2>Submit Maintenance Request</h2>
+	<p>Please fill out the form below to submit a maintenance request:</p>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br><br>
+		
+		<label for="houseNumber">House Number:</label>
+		<input type="text" id="houseNumber" name="houseNumber"><br><br>
+		
+		<label for="issueDescription">Description of Issue:</label>
+		<textarea id="issueDescription" name="issueDescription"></textarea><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+	
+	<h2>Submit Notice</h2>
+	<p>Please fill out the form below to submit a move-out notice:</p>
+	<form>
+		<label for="moveOutDate">Move-Out Date:</label>
+		<input type="date" id="moveOutDate" name="moveOutDate"><br><br>
+		
+		<label for="damageDescription">Description of Damages:</label>
+		<textarea id="damageDescription" name="damageDescription"></textarea><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+	
+	<script>
+		function showBankDetails() {
+			var bankDetails = document.getElementById("bankDetails");
+			if (bankDetails.style.display === "none") {
+				bankDetails.style.display = "block";
+			} else {
+				bankDetails.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>

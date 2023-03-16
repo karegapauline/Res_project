@@ -1,0 +1,41 @@
+<h2>Repairs</h2>
+	<div id="repairDetails">
+		<h3>Issue Details:</h3>
+		<p>House Number: <span id="houseNumber"></span></p>
+		<p>Issue Description: <span id="issueDescription"></span></p>
+		<p>Please attach the invoice or receipt for this repair:</p>
+		<form>
+			<label for="repairFile">Select file:</label>
+			<input type="file" id="repairFile" name="repairFile"><br><br>
+			<input type="submit" value="Submit" onclick="sendRepairDetails()">
+		</form>
+		<button onclick="sendNoticeToAdminAndTenant()">Issue Fixed and Closed</button>
+	</div>
+	
+	<script>
+		function sendNoticeToAdmin() {
+			alert("Notice has been sent to the admin.");
+		}
+		
+		function showRepairDetails(houseNumber, issueDescription) {
+			var repairDetails = document.getElementById("repairDetails");
+			var houseNumberSpan = document.getElementById("houseNumber");
+			var issueDescriptionSpan = document.getElementById("issueDescription");
+			houseNumberSpan.innerHTML = houseNumber;
+			issueDescriptionSpan.innerHTML = issueDescription;
+			repairDetails.style.display = "block";
+		}
+		
+		function sendRepairDetails() {
+			var repairFile = document.getElementById("repairFile").value;
+			alert("Repair details have been sent to the admin.\nRepair file: " + repairFile);
+		}
+		
+		function sendNoticeToAdminAndTenant() {
+			alert("Notice has been sent to the admin and tenant.");
+			var repairDetails = document.getElementById("repairDetails");
+			repairDetails.style.display = "none";
+		}
+	</script>
+</body>
+</html>

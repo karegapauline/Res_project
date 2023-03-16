@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+</head>
+<body>
+	<h1>Admin Dashboard</h1>
+	
+	<h2>Rent Payments</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Tenant Name</th>
+				<th>Payment Date</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John Smith</td>
+				<td>2023-03-01</td>
+				<td>$1000</td>
+			</tr>
+			<tr>
+				<td>Jane Doe</td>
+				<td>2023-03-05</td>
+				<td>$800</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<h2>Maintenance Issues</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Submission Date</th>
+				<th>Tenant Name</th>
+				<th>House Number</th>
+				<th>Description</th>
+				<th>Invoice/Receipt</th>
+				<th>Fixed/Closed?</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>2023-03-15</td>
+				<td>John Smith</td>
+				<td>123 Main St.</td>
+				<td>Leaky Faucet</td>
+				<td><a href="invoice1.pdf" target="_blank">View</a></td>
+				<td><button onclick="markIssueAsClosed()">Closed</button></td>
+			</tr>
+			<tr>
+				<td>2023-03-14</td>
+				<td>Jane Doe</td>
+				<td>456 Elm St.</td>
+				<td>Broken Window</td>
+				<td><a href="invoice2.pdf" target="_blank">View</a></td>
+				<td><button onclick="markIssueAsClosed()">Closed</button></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<h2>Notices to Move Out and Damages</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Submission Date</th>
+				<th>Tenant Name</th>
+				<th>Date of Moving Out</th>
+				<th>Damages Description</th>
+				<th>Acknowledge Receipt?</th>
+				<th>Schedule Repairs</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>2023-03-10</td>
+				<td>John Smith</td>
+				<td>2023-03-31</td>
+				<td>Broken tiles in bathroom</td>
+				<td><button onclick="acknowledgeReceipt()">Received</button></td>
+				<td><button onclick="scheduleRepairs()">Schedule</button></td>
+			</tr>
+			<tr>
+				<td>2023-03-08</td>
+				<td>Jane Doe</td>
+				<td>2023-03-31</td>
+				<td>Scratched countertop in kitchen</td>
+				<td><button onclick="acknowledgeReceipt()">Received</button></td>
+				<td><button onclick="scheduleRepairs()">Schedule</button></td>
+			</tr>
+		</tbody>
+	</table
